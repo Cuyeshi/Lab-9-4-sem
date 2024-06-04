@@ -9,7 +9,7 @@ namespace Lab_9
     {
         static void Main()
         {
-            File.ReadAllLines("path/to/your/file.txt")
+            File.ReadAllLines("C:\\Users\\Cuyeshi\\Documents\\ОТЧЁТЫ\\Лабораторные работы 2-ой курс (4 семестр)\\ООПиП\\№9 ООПиП\\Lab_9\\Example.txt")
                 .Where(line => line.Split(' ').Any(word => DateTime.TryParse(word, out _)))
                 .SelectMany(line => line.Split(' ').Where(word => DateTime.TryParse(word, out _)).Select(word => DateTime.Parse(word)))
                 .OrderBy(date => date)
